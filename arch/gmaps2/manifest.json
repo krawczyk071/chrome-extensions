@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Google Maps Photo Downloader",
+  "version": "1.0",
+  "description": "Save photos from Google Maps with ease",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

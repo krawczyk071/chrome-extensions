@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Photo Downloader</title>
+  </head>
+  <body>
+    <button id="save-button">Save Photo</button>
+
+    <script>
+      const saveButton = document.getElementById("save-button");
+      saveButton.addEventListener("click", () => {
+        chrome.contextMenus.create({
+          id: "googlemaps-photo-downloader",
+          title: "Save Google Maps Photo",
+          contexts: ["image"],
+        });
+      });
+    </script>
+  </body>
+</html>

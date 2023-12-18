@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Gmaps2Photo",
+  "version": "1.0",
+  "description": "Save photos from Google Maps with ease",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting",
+    "downloads",
+    "tabs"
+  ],
+  "host_permissions": ["*://*.example.org/"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
